@@ -1,0 +1,9 @@
+{
+  "name": "snehalata-ecosystem",
+  "description": "Aura AI-powered multi-vendor e-commerce ecosystem with governance and direct-to-vendor sales integration.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
