@@ -25,3 +25,5 @@ dist/
 # IDEs
 .vscode/
 .idea/
+.vercel
+.env*.local

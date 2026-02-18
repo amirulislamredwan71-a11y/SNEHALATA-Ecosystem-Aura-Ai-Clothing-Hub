@@ -1,120 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SNEHALATA | Aura Neural Ecosystem</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Hind+Siliguri:wght@300;400;600;700&family=Inter:wght@300;400;600;900&display=swap"
-        rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJTRGL7FHB"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'Hind Siliguri', 'sans-serif'],
-                        serif: ['Cinzel', 'Hind Siliguri', 'serif'],
-                        bengali: ['Hind Siliguri', 'sans-serif'],
-                    },
-                    colors: {
-                        aura: {
-                            purple: '#7c3aed',
-                            black: '#000000',
-                            glass: 'rgba(255, 255, 255, 0.03)',
-                            glassBorder: 'rgba(255, 255, 255, 0.08)'
-                        }
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    }
-                }
-            }
-        }
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-SJTRGL7FHB', { 'animate_speed': 'high', 'neural_tracking': true });
     </script>
+
+    <title>Snehalata - Aura AI Powered Clothing Hub | Future of Fashion</title>
+    <meta name="title" content="Snehalata - Aura AI Powered Clothing Hub" />
+    <meta name="description"
+        content="Snehalata is a next-gen clothing ecosystem powered by Aura AI. Experience virtual try-on, real-time inventory tracking, and designer tools for the modern fashion era." />
+    <meta name="keywords"
+        content="Snehalata, Aura AI, Fashion AI, Virtual Try-on, Clothing Hub, Bangladesh Fashion, Smart Inventory" />
+    <meta name="author" content="Amirul Islam Redwan" />
+    <meta name="theme-color" content="#000000" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.snehalata.com/" />
+    <meta property="og:title" content="Snehalata - Neural Grid Fashion" />
+    <meta property="og:description"
+        content="Explore the exclusive collection of Snehalata. Real-time fashion insights by Aura AI." />
+    <meta property="og:image" content="https://www.snehalata.com/og-preview.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <style>
-        body {
-            background-color: #000000;
-            color: white;
-            margin: 0;
-            font-family: 'Inter', 'Hind Siliguri', sans-serif;
-            overflow-x: hidden;
+        :root {
+            --aura-purple: #7c3aed;
+            --aura-glow: rgba(124, 58, 237, 0.3);
+            --bg-dark: #050505;
         }
 
-        .bg-aura-glow {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: default;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Neural Grid Background */
+        .neural-grid {
             position: fixed;
             inset: 0;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: radial-gradient(circle at 50% 50%, black, transparent 80%);
             z-index: -1;
-            background: radial-gradient(circle at 50% -20%, #15002b 0%, #000000 100%);
-        }
-
-        .glow-orb {
-            position: absolute;
-            width: 50vw;
-            height: 50vw;
-            background: radial-gradient(circle, rgba(124, 58, 237, 0.05) 0%, transparent 70%);
-            filter: blur(80px);
             pointer-events: none;
         }
 
-        .bn-heavy {
-            font-family: 'Hind Siliguri', sans-serif;
-            font-weight: 700;
+        /* Animated Aura Glow */
+        .aura-sphere {
+            position: fixed;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80vw;
+            height: 50vh;
+            background: radial-gradient(circle, var(--aura-glow) 0%, transparent 70%);
+            filter: blur(80px);
+            z-index: -1;
+            animation: pulse 8s infinite alternate;
         }
 
-        .bg-aura-glass {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+        @keyframes pulse {
+            0% {
+                opacity: 0.5;
+                transform: translateX(-50%) scale(1);
+            }
+
+            100% {
+                opacity: 0.8;
+                transform: translateX(-50%) scale(1.1);
+            }
         }
 
-        /* Premium scrollbar */
+        /* Custom Selection Color */
+        ::selection {
+            background: var(--aura-purple);
+            color: white;
+        }
+
+        /* Scrollbar Styling */
         ::-webkit-scrollbar {
             width: 6px;
         }
 
         ::-webkit-scrollbar-track {
-            background: #000;
+            background: #0a0a0a;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #1a1a1a;
+            background: #333;
             border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #7c3aed;
-        }
-
-        a,
-        button {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            background: var(--aura-purple);
         }
     </style>
-    <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom": "https://esm.sh/react-dom@^19.2.4",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
-    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.95.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "vite": "https://esm.sh/vite@^7.3.1",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3"
-  }
-}
-</script>
 </head>
 
 <body>
-    <div class="bg-aura-glow"></div>
-    <div class="glow-orb top-0 left-0 animate-pulse-slow"></div>
-    <div class="glow-orb bottom-0 right-0 opacity-30"></div>
+    <div class="neural-grid"></div>
+    <div class="aura-sphere"></div>
+
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+
+    <script type="module" src="/src/main.tsx"></script>
+
+    <noscript>
+        <div style="text-align: center; padding: 20px; background: red; color: white;">
+            Please enable JavaScript to experience Snehalata Aura AI.
+        </div>
+    </noscript>
 </body>
 
 </html>
