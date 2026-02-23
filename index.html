@@ -11,15 +11,19 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'G-SJTRGL7FHB', { 'animate_speed': 'high', 'neural_tracking': true });
+        gtag('config', 'G-SJTRGL7FHB', {
+            'animate_speed': 'high',
+            'neural_tracking': true,
+            'cookie_flags': 'SameSite=None;Secure'
+        });
     </script>
 
     <title>Snehalata - Aura AI Powered Clothing Hub | Future of Fashion</title>
+
     <meta name="title" content="Snehalata - Aura AI Powered Clothing Hub" />
     <meta name="description"
-        content="Snehalata is a next-gen clothing ecosystem powered by Aura AI. Experience virtual try-on, real-time inventory tracking, and designer tools for the modern fashion era." />
-    <meta name="keywords"
-        content="Snehalata, Aura AI, Fashion AI, Virtual Try-on, Clothing Hub, Bangladesh Fashion, Smart Inventory" />
+        content="Snehalata is a next-gen clothing ecosystem powered by Aura AI. Experience virtual try-on and real-time fashion insights." />
+    <meta name="keywords" content="Snehalata, Aura AI, Fashion AI, Virtual Try-on, Clothing Hub, Bangladesh Fashion" />
     <meta name="author" content="Amirul Islam Redwan" />
     <meta name="theme-color" content="#000000" />
 
@@ -44,17 +48,12 @@
             --bg-dark: #050505;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            cursor: default;
-        }
-
         body {
             background-color: var(--bg-dark);
             color: #ffffff;
             font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 0;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
@@ -72,7 +71,7 @@
             pointer-events: none;
         }
 
-        /* Animated Aura Glow */
+        /* Animated Aura Sphere */
         .aura-sphere {
             position: fixed;
             top: -10%;
@@ -97,30 +96,6 @@
                 transform: translateX(-50%) scale(1.1);
             }
         }
-
-        /* Custom Selection Color */
-        ::selection {
-            background: var(--aura-purple);
-            color: white;
-        }
-
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0a0a0a;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--aura-purple);
-        }
     </style>
 </head>
 
@@ -130,11 +105,11 @@
 
     <div id="root"></div>
 
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="./src/main.tsx"></script>
 
     <noscript>
-        <div style="text-align: center; padding: 20px; background: red; color: white;">
-            Please enable JavaScript to experience Snehalata Aura AI.
+        <div style="text-align: center; padding: 20px; background: #7c3aed; color: white; font-family: sans-serif;">
+            Please enable JavaScript to experience the Snehalata Aura AI Ecosystem.
         </div>
     </noscript>
 </body>
