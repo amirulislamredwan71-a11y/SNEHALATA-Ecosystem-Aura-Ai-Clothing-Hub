@@ -24,7 +24,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({ embedded = false, 
     if ((isOpen || embedded) && messages.length === 0) {
       setMessages([{
         role: 'ai',
-        content: 'আসসালামু আলাইকুম! আমি স্নেহলতা ইকোসিস্টেমের Aura AI। আমি আপনাকে পণ্য খুঁজে পেতে বা নতুন ডিজাইনের ছবি তৈরি করে দিতে পারি। আজ কীভাবে সাহায্য করতে পারি?',
+        content: 'আসসালামু আলাইকুম! আমি স্নেহলতা ইকোসিস্টেমের Aura AI 1.5। আমি আপনাকে পণ্য খুঁজে পেতে বা নতুন ডিজাইনের ছবি তৈরি করে দিতে পারি। আজ কীভাবে সাহায্য করতে পারি?',
         timestamp: Date.now()
       }]);
     }
